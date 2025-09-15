@@ -202,7 +202,7 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
-        color: #2563eb;
+        color: #fbbf24;
     }
     .nav-link.active::after {
         width: 100%;
@@ -244,6 +244,113 @@ loadingStyle.textContent = `
 `;
 document.head.appendChild(loadingStyle);
 
+// Profile picture upload functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const profilePictureInput = document.getElementById('profile-picture');
+    const uploadArea = document.querySelector('.upload-area');
+    const imagePreview = document.getElementById('image-preview');
+    const previewImg = document.getElementById('preview-img');
+    
+    if (profilePictureInput) {
+        profilePictureInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            
+            if (file) {
+                // Validate file type
+                if (!file.type.startsWith('image/')) {
+                    alert('Please select a valid image file.');
+                    return;
+                }
+                
+                // Validate file size (5MB limit)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('File size must be less than 5MB.');
+                    return;
+                }
+                
+                // Create FileReader to read the file
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    previewImg.src = e.target.result;
+                    uploadArea.style.display = 'none';
+                    imagePreview.style.display = 'block';
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+});
+
+// Function to remove uploaded image
+function removeImage() {
+    const profilePictureInput = document.getElementById('profile-picture');
+    const uploadArea = document.querySelector('.upload-area');
+    const imagePreview = document.getElementById('image-preview');
+    
+    if (profilePictureInput) {
+        profilePictureInput.value = '';
+        uploadArea.style.display = 'flex';
+        imagePreview.style.display = 'none';
+    }
+}
+
+// Drag and drop functionality for upload area
+document.addEventListener('DOMContentLoaded', () => {
+    const uploadArea = document.querySelector('.upload-area');
+    
+    if (uploadArea) {
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        // Highlight drop area when item is dragged over it
+        ['dragenter', 'dragover'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        // Handle dropped files
+        uploadArea.addEventListener('drop', handleDrop, false);
+    }
+});
+
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+function highlight(e) {
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+}
+
+function unhighlight(e) {
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+}
+
+function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    
+    if (files.length > 0) {
+        const profilePictureInput = document.getElementById('profile-picture');
+        if (profilePictureInput) {
+            profilePictureInput.files = files;
+            // Trigger the change event
+            const event = new Event('change', { bubbles: true });
+            profilePictureInput.dispatchEvent(event);
+        }
+    }
+}
+
 // Console welcome message
-console.log('%c👋 Welcome to Cyndie\'s Portfolio!', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+console.log('%c👋 Welcome to Cyndie\'s Portfolio!', 'color: #fbbf24; font-size: 20px; font-weight: bold;');
 console.log('%cThanks for checking out the code! Feel free to reach out if you have any questions.', 'color: #6b7280; font-size: 14px;');

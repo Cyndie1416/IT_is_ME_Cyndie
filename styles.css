@@ -45,7 +45,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: #2563eb;
+    color: #228B22;
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #2563eb;
+    color: #228B22;
 }
 
 .nav-link::after {
@@ -75,7 +75,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #2563eb;
+    background-color: #228B22;
     transition: width 0.3s ease;
 }
 
@@ -100,7 +100,10 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.3)), url('image/rm422-047.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -122,6 +125,7 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
+    color: #228B22;
 }
 
 .highlight {
@@ -132,13 +136,13 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    color: #e5e7eb;
+    color: #008000;
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: #d1d5db;
+    color: #FFFFFF;
     line-height: 1.7;
 }
 
@@ -181,7 +185,7 @@ body {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #2563eb;
+    color: #228B22;
     transform: translateY(-2px);
 }
 
@@ -201,11 +205,98 @@ body {
     justify-content: center;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
 }
 
-.profile-placeholder {
-    font-size: 4rem;
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.profile-upload {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.upload-area {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.upload-area:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.upload-content {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.upload-content i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.upload-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.upload-content small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.image-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.remove-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.remove-image:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
 
 /* Section Styles */
@@ -227,7 +318,7 @@ section {
     position: absolute;
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -270,7 +361,7 @@ section {
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     color: white;
     padding: 8px 20px;
     border-radius: 25px;
@@ -279,6 +370,30 @@ section {
 }
 
 /* Projects Section */
+#projects {
+    background-image: url('image/d58e212c-b3e1-4ba9-9f6e-732d2192ed8a.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+
+#projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+#projects .container {
+    position: relative;
+    z-index: 2;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -303,7 +418,7 @@ section {
 .project-image {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -347,7 +462,7 @@ section {
 }
 
 .project-link {
-    color: #2563eb;
+    color: #228B22;
     text-decoration: none;
     font-weight: 500;
     display: flex;
@@ -357,7 +472,7 @@ section {
 }
 
 .project-link:hover {
-    color: #1d4ed8;
+    color: #047857;
 }
 
 /* Hobbies Section */
@@ -390,7 +505,7 @@ section {
 .hobby-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -412,6 +527,30 @@ section {
 }
 
 /* Contact Section */
+#contact {
+    background-image: url('image/rm422-047.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 2;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -444,7 +583,7 @@ section {
 }
 
 .contact-item i {
-    color: #2563eb;
+    color: #228B22;
     width: 20px;
 }
 
@@ -456,7 +595,7 @@ section {
 .social-link {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -496,7 +635,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #228B22;
 }
 
 .form-group textarea {

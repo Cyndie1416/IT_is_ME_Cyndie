@@ -31,7 +31,7 @@
 }
 
 .contact-item i {
-  color: #2563eb;
+  color: #fbbf24;
   width: 20px;
 }
 
@@ -83,7 +83,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #fbbf24;
 }
 
 .form-group textarea {

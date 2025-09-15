@@ -91,12 +91,12 @@ section {
 
 .btn-secondary {
   background-color: transparent;
-  color: #2563eb;
-  border-color: #2563eb;
+  color: #fbbf24;
+  border-color: #fbbf24;
 }
 
 .btn-secondary:hover {
-  background-color: #2563eb;
+  background-color: #fbbf24;
   color: white;
   transform: translateY(-2px);
 }
