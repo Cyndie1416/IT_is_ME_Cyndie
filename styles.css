@@ -159,7 +159,7 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
-    color: white;
+    color: black;
 }
 
 .highlight {
@@ -176,7 +176,7 @@ body {
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
     line-height: 1.7;
 }
 
@@ -476,7 +476,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(34, 139, 34, 0.4);
     z-index: 1;
 }
 
@@ -582,6 +582,17 @@ section {
     color: #047857;
 }
 
+.projects-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects-cta .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 /* Hobbies Section */
 .hobbies {
     background-color: #f9fafb;
@@ -589,15 +600,15 @@ section {
 
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .hobby-card {
     background: white;
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -610,27 +621,44 @@ section {
 }
 
 .hobby-icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .hobby-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
     color: #1f2937;
 }
 
 .hobby-card p {
     color: #6b7280;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.hobby-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card-link:hover {
+    transform: translateY(-8px);
+}
+
+.hobby-card-link:hover .hobby-card {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Contact Section */
@@ -649,7 +677,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(34, 139, 34, 0.4);
     z-index: 1;
 }
 
@@ -895,6 +923,305 @@ section {
     .contact-blur-box {
         padding: 1.5rem;
     }
+}
+
+/* Projects Page Styles */
+.projects-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, rgba(34, 139, 34, 0.9) 0%, rgba(0, 100, 0, 0.8) 100%), url('image/2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+}
+
+.projects-hero-blur-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-hero-content {
+    text-align: center;
+}
+
+.projects-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.projects-hero-subtitle {
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.all-projects {
+    padding: 80px 0;
+    background-color: #f9fafb;
+}
+
+.all-projects .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.all-projects .project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.all-projects .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-home {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
+    color: white;
+    text-align: center;
+}
+
+.back-to-home-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.back-to-home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.back-to-home .btn-primary {
+    background-color: white;
+    color: #228B22;
+    border-color: white;
+}
+
+.back-to-home .btn-primary:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.nav-link.active {
+    color: #fbbf24;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Hobby Pages Styles */
+.hobby-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, rgba(34, 139, 34, 0.9) 0%, rgba(0, 100, 0, 0.8) 100%), url('image/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+}
+
+.hobby-hero-blur-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hobby-hero-content {
+    text-align: center;
+}
+
+.hobby-hero-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.hobby-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.hobby-hero-subtitle {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.vlogs-section {
+    padding: 80px 0;
+    background-color: #f9fafb;
+}
+
+.vlogs-blur-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.vlogs-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+}
+
+.vlogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.vlog-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.vlog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.vlog-thumbnail {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.vlog-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.vlog-content {
+    padding: 1.5rem;
+}
+
+.vlog-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #1f2937;
+}
+
+.vlog-content p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.vlog-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.vlog-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.vlog-link {
+    color: #228B22;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.vlog-link:hover {
+    color: #047857;
+}
+
+.back-to-hobbies {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #10b981 0%, #228B22 100%);
+    color: white;
+    text-align: center;
+}
+
+.back-to-hobbies-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.back-to-hobbies-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.back-to-hobbies .btn-primary {
+    background-color: white;
+    color: #228B22;
+    border-color: white;
+}
+
+.back-to-hobbies .btn-primary:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
 }
 
 /* Animation Classes */
