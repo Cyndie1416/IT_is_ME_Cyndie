@@ -1,6 +1,6 @@
 /* About Section */
 .about {
-  background-color: #f9fafb;
+  background-color: #F5F0E1;
 }
 
 .about-content {
@@ -23,7 +23,7 @@
 .skills h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #1f2937;
+  color: #4A4A4A;
 }
 
 .skills-grid {
@@ -34,8 +34,8 @@
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+  color: #FFF8E7;
   padding: 8px 20px;
   border-radius: 25px;
   font-weight: 500;
@@ -51,8 +51,8 @@
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #e5e7eb;
-  border-top: 5px solid #fbbf24;
+  border: 5px solid rgba(212, 175, 55, 0.3);
+  border-top: 5px solid #D4AF37;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
